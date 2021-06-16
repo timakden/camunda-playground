@@ -3,11 +3,11 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     idea
-    id("com.github.ben-manes.versions") version "0.38.0"
-    id("org.springframework.boot") version "2.4.3"
+    id("com.github.ben-manes.versions") version "0.39.0"
+    id("org.springframework.boot") version "2.5.1"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.4.31"
-    kotlin("plugin.spring") version "1.4.31"
+    kotlin("jvm") version "1.5.10"
+    kotlin("plugin.spring") version "1.5.10"
 }
 
 group = "ru.timakden"
@@ -16,7 +16,6 @@ java.sourceCompatibility = VERSION_11
 java.targetCompatibility = VERSION_11
 
 repositories {
-    jcenter()
     mavenCentral()
 }
 
@@ -29,7 +28,7 @@ dependencyManagement {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
-    implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.14.0")
+    implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.15.0")
     implementation("com.sun.xml.bind:jaxb-impl:3.0.0")
     implementation("com.h2database:h2")
 }
