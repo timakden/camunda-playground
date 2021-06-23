@@ -21,7 +21,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:2.4.1")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:2.5.1")
     }
 }
 
