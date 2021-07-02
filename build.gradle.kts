@@ -29,7 +29,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
     implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.15.0")
-    implementation("com.sun.xml.bind:jaxb-impl:3.0.0")
+    implementation("com.sun.xml.bind:jaxb-impl:3.0.1")
     implementation("com.h2database:h2")
 }
 
