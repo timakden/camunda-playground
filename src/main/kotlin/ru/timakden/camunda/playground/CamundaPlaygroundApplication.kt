@@ -13,7 +13,7 @@ import java.util.*
 class CamundaPlaygroundApplication(private val runtimeService: RuntimeService) {
     @EventListener
     fun processPostDeploy(event: PostDeployEvent?) {
-        runtimeService.startProcessInstanceByKey(MULTI_INSTANCE_PROCESS, UUID.randomUUID().toString())
+        runtimeService.startProcessInstanceByKey("playground", UUID.randomUUID().toString())
     }
 }
 

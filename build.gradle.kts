@@ -31,9 +31,9 @@ dependencyManagement {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
-    implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.16.0")
+    implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.17.0")
     implementation("com.sun.xml.bind:jaxb-impl:3.0.2")
-    implementation("com.h2database:h2:2.1.210")
+    implementation("com.h2database:h2:2.1.212")
 }
 
 tasks.withType<KotlinCompile> {
