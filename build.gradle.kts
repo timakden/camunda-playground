@@ -4,19 +4,14 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     idea
     id("com.github.ben-manes.versions") version "0.42.0"
-    id("org.springframework.boot") version "2.6.6"
+    id("org.springframework.boot") version "2.6.7"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.6.20"
-    kotlin("plugin.spring") version "1.6.20"
+    kotlin("jvm") version "1.6.21"
+    kotlin("plugin.spring") version "1.6.21"
 }
 
 group = "ru.timakden"
 version = "1.0-SNAPSHOT"
-
-java {
-    sourceCompatibility = VERSION_17
-    targetCompatibility = VERSION_17
-}
 
 repositories {
     mavenCentral()
@@ -24,7 +19,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:2.6.6")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:2.6.7")
     }
 }
 
@@ -34,6 +29,12 @@ dependencies {
     implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.17.0")
     implementation("com.sun.xml.bind:jaxb-impl:3.0.2")
     implementation("com.h2database:h2:2.1.212")
+}
+
+kotlin {
+    jvmToolchain {
+        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
 
 tasks.withType<KotlinCompile> {
