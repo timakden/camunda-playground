@@ -1,13 +1,12 @@
-import org.gradle.api.JavaVersion.VERSION_17
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     idea
     id("com.github.ben-manes.versions") version "0.42.0"
-    id("org.springframework.boot") version "2.6.7"
+    id("org.springframework.boot") version "2.7.0"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.6.21"
-    kotlin("plugin.spring") version "1.6.21"
+    kotlin("jvm") version "1.7.0"
+    kotlin("plugin.spring") version "1.7.0"
 }
 
 group = "ru.timakden"
@@ -19,7 +18,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:2.6.7")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.0")
     }
 }
 
@@ -33,7 +32,7 @@ dependencies {
 
 kotlin {
     jvmToolchain {
-        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(17))
+        this.languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
