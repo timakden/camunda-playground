@@ -3,10 +3,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     idea
     id("com.github.ben-manes.versions") version "0.42.0"
-    id("org.springframework.boot") version "2.7.0"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.7.0"
-    kotlin("plugin.spring") version "1.7.0"
+    id("org.springframework.boot") version "2.7.1"
+    id("io.spring.dependency-management") version "1.0.12.RELEASE"
+    kotlin("jvm") version "1.7.10"
+    kotlin("plugin.spring") version "1.7.10"
 }
 
 group = "ru.timakden"
@@ -18,7 +18,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.0")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.1")
     }
 }
 
@@ -26,7 +26,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
     implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.17.0")
-    implementation("com.sun.xml.bind:jaxb-impl:3.0.2")
+    implementation("com.sun.xml.bind:jaxb-impl:4.0.0")
     implementation("com.h2database:h2:2.1.212")
 }
 
