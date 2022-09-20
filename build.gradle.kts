@@ -27,7 +27,7 @@ dependencies {
     implementation(kotlin("reflect"))
     implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.17.0")
     implementation("com.sun.xml.bind:jaxb-impl:4.0.0")
-    implementation("com.h2database:h2:2.1.212")
+    implementation("com.h2database:h2:2.1.214")
 }
 
 kotlin {
