@@ -2,9 +2,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     idea
-    id("com.github.ben-manes.versions") version "0.42.0"
-    id("org.springframework.boot") version "2.7.4"
-    id("io.spring.dependency-management") version "1.0.14.RELEASE"
+    id("com.github.ben-manes.versions") version "0.43.0"
+    id("org.springframework.boot") version "2.7.5"
+    id("io.spring.dependency-management") version "1.1.0"
     kotlin("jvm") version "1.7.20"
     kotlin("plugin.spring") version "1.7.20"
 }
@@ -18,7 +18,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.4")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.5")
     }
 }
 
