@@ -5,8 +5,8 @@ plugins {
     id("com.github.ben-manes.versions") version "0.45.0"
     id("org.springframework.boot") version "3.0.2"
     id("io.spring.dependency-management") version "1.1.0"
-    kotlin("jvm") version "1.8.0"
-    kotlin("plugin.spring") version "1.8.0"
+    kotlin("jvm") version "1.8.10"
+    kotlin("plugin.spring") version "1.8.10"
 }
 
 group = "ru.timakden"
@@ -26,7 +26,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
     implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.18.0")
-    implementation("com.sun.xml.bind:jaxb-impl:4.0.1")
+    implementation("com.sun.xml.bind:jaxb-impl:4.0.2")
     implementation("com.h2database:h2:2.1.214")
 }
 
