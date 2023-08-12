@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     idea
     id("com.github.ben-manes.versions") version "0.47.0"
-    id("org.springframework.boot") version "3.1.1"
-    id("io.spring.dependency-management") version "1.1.0"
+    id("org.springframework.boot") version "3.1.2"
+    id("io.spring.dependency-management") version "1.1.3"
     kotlin("jvm") version "1.9.0"
     kotlin("plugin.spring") version "1.9.0"
 }
@@ -18,7 +18,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:3.1.1")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:3.1.2")
     }
 }
 
