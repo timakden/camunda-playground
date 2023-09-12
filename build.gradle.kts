@@ -2,11 +2,11 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     idea
-    id("com.github.ben-manes.versions") version "0.47.0"
-    id("org.springframework.boot") version "3.1.2"
+    id("com.github.ben-manes.versions") version "0.48.0"
+    id("org.springframework.boot") version "3.1.3"
     id("io.spring.dependency-management") version "1.1.3"
-    kotlin("jvm") version "1.9.0"
-    kotlin("plugin.spring") version "1.9.0"
+    kotlin("jvm") version "1.9.10"
+    kotlin("plugin.spring") version "1.9.10"
 }
 
 group = "ru.timakden"
@@ -18,7 +18,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:3.1.2")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:3.1.3")
     }
 }
 
@@ -27,7 +27,7 @@ dependencies {
     implementation(kotlin("reflect"))
     implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-webapp:7.19.0")
     implementation("com.sun.xml.bind:jaxb-impl:4.0.3")
-    implementation("com.h2database:h2:2.2.220")
+    implementation("com.h2database:h2:2.2.222")
 }
 
 kotlin {
